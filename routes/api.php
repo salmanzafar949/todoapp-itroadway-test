@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('todo')
-    ->middleware(['auth:api'])
+    ->middleware(['auth:api', 'isEmailVerified'])
     ->group(function (){
         Route::apiResource('/', 'TodoController');
     });
