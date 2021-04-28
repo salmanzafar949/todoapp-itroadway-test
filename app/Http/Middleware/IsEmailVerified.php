@@ -17,7 +17,7 @@ class IsEmailVerified
      */
     public function handle(Request $request, Closure $next)
     {
-        if (auth()->user()->email_verified_at !== null)
+        if (auth()->check() && auth()->user()->email_verified_at !== null)
             return $next($request);
         return response([
             'error' => 'Please verify your email'
