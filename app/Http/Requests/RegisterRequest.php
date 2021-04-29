@@ -47,7 +47,8 @@ class RegisterRequest extends FormRequest
         $user->notify(new VerifyEmailNotification($user));
 
         return response([
-            'data' => 'Registration successful & Verification email sent'
+            'data' => 'Registration successful & Verification email sent',
+            'user' => $user->id,
         ],Response::HTTP_CREATED);
     }
 }
