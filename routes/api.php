@@ -12,7 +12,7 @@ Route::prefix('auth')
     });
 
 Route::prefix('todo')
-    ->middleware(['auth:api', 'isEmailVerified'])
+    ->middleware(['auth:api', 'isEmailVerified', 'validateTodoAndUser'])
     ->group(function (){
         Route::apiResource('/', 'TodoController')
             ->parameters([
