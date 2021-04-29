@@ -25,7 +25,9 @@ class TodoFactory extends Factory
             'user_id' => rand(1,1000),
             'title' => $this->faker->title,
             'description' => $this->faker->text,
-            'isCompleted' => rand(0,1)
+            'isCompleted' => rand(0,1),
+            'created_at' => now(),
+            'updated_at' => now(),
         ];
     }
 }

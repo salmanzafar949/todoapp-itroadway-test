@@ -21,6 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'code',
     ];
 
     /**
@@ -41,6 +42,11 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function setPasswordAttribute($value) : void
+    {
+        $this->attributes['password'] = bcrypt($value);
+    }
 
     public function todos(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
