@@ -1,0 +1,364 @@
+{
+	"info": {
+		"_postman_id": "92249ac4-5202-4013-94c3-3f888409741d",
+		"name": "todoapp-itroadway-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Todo",
+			"item": [
+				{
+					"name": "List all todos for authenticated user",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOTJmMGM2YzNmNjJlM2Q1YWYzMjljZjIwYTRiMzc1ODg0OTY0NjdiMWFkODlhN2ZkOWM2YzI4ZDI3ZWVjNjgxN2QyZTMyN2ViNDA1N2IyNmIiLCJpYXQiOjE2MTk2OTU4MDkuOTg0NzcsIm5iZiI6MTYxOTY5NTgwOS45ODQ3NzMsImV4cCI6MTY1MTIzMTgwOS45NzkzMTIsInN1YiI6IjUwMDQiLCJzY29wZXMiOltdfQ.dvhEGvI2sl0GtEonzxDFnjE-uiOm0VvDqHiW8GCQzbnBqCJa9lMt2mYy9kDffdt6WLZ2eI8mhR0-nUlOz3WSjDrQLxRP0FFxh51NsksXpjHrDoTBFo9YQdZ5Qzy7uqHeDOnvDWo2HNvKCWBq3YI4FMQT6SYpfeeK79bsW0KbrCYM9HceEr5gD9ZmSSQKCTyajrqbkzitfbA2H0zFMDcrqqjcL_NXNwjLGciR5ruc9tFVdDSHJYBxA5uRIFb0Xh4WqYEKgLZ4MhEaZgrehFydEYuxiB_1FMzK78Kpv9F1vPi6j5HmhYFWmtDN6HyMuVYJ2CaonNwWoKSCqfnXi_efocs-kOrEmBxdkTGtZ0YAW5HNPTXYoSCq-Gv8h_EiVuKDwx9Y-PNRbFVQROxvX0sN_SpNJMMyuwS6TsCztDZNYKbP0fjApO7knS_m0J8NX5OatytoKhxSMjECLqD9eTo2qR9ZDbIGG8Atl-ld7aZ_r8C87PpRKb4vix5d4fAeYNpU04K6nQSh5F4o7BelwUCx9ytLo35tnn5jjhv61gi4RFX-P1wwztN3Fz1hY51IasK-UdPzBSfSAbsL3RYjNDM4p3vuEcOZpk_sXK_T44q6XYcVPrgNdJKo6EKyf-uRXSfn1ev2PlTnWvCGgPD0DZcV7pKN3oGMi6u-B-rCRjhSZUs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/todo",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"todo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store/Create Todo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOTJmMGM2YzNmNjJlM2Q1YWYzMjljZjIwYTRiMzc1ODg0OTY0NjdiMWFkODlhN2ZkOWM2YzI4ZDI3ZWVjNjgxN2QyZTMyN2ViNDA1N2IyNmIiLCJpYXQiOjE2MTk2OTU4MDkuOTg0NzcsIm5iZiI6MTYxOTY5NTgwOS45ODQ3NzMsImV4cCI6MTY1MTIzMTgwOS45NzkzMTIsInN1YiI6IjUwMDQiLCJzY29wZXMiOltdfQ.dvhEGvI2sl0GtEonzxDFnjE-uiOm0VvDqHiW8GCQzbnBqCJa9lMt2mYy9kDffdt6WLZ2eI8mhR0-nUlOz3WSjDrQLxRP0FFxh51NsksXpjHrDoTBFo9YQdZ5Qzy7uqHeDOnvDWo2HNvKCWBq3YI4FMQT6SYpfeeK79bsW0KbrCYM9HceEr5gD9ZmSSQKCTyajrqbkzitfbA2H0zFMDcrqqjcL_NXNwjLGciR5ruc9tFVdDSHJYBxA5uRIFb0Xh4WqYEKgLZ4MhEaZgrehFydEYuxiB_1FMzK78Kpv9F1vPi6j5HmhYFWmtDN6HyMuVYJ2CaonNwWoKSCqfnXi_efocs-kOrEmBxdkTGtZ0YAW5HNPTXYoSCq-Gv8h_EiVuKDwx9Y-PNRbFVQROxvX0sN_SpNJMMyuwS6TsCztDZNYKbP0fjApO7knS_m0J8NX5OatytoKhxSMjECLqD9eTo2qR9ZDbIGG8Atl-ld7aZ_r8C87PpRKb4vix5d4fAeYNpU04K6nQSh5F4o7BelwUCx9ytLo35tnn5jjhv61gi4RFX-P1wwztN3Fz1hY51IasK-UdPzBSfSAbsL3RYjNDM4p3vuEcOZpk_sXK_T44q6XYcVPrgNdJKo6EKyf-uRXSfn1ev2PlTnWvCGgPD0DZcV7pKN3oGMi6u-B-rCRjhSZUs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\": 5004,\n    \"title\": \"todo test app\",\n    \"description\": \"Todo Test App Desc\",\n    \"isCompleted\": false\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/todo",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"todo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update/Edit Todo",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTE2MmJiODNjYjJhZWQ4ODRlYjkwNDIyNzdiMDg2YzM1ODFhMjk3Y2E5NmRkZDAyMDAzYTJlNDM0NzU3MTI2ZjdmYWRiOTdhYjRlZTUxY2UiLCJpYXQiOjE2MTk2OTc5NzAuMjEzMDI5LCJuYmYiOjE2MTk2OTc5NzAuMjEzMDMyLCJleHAiOjE2NTEyMzM5NzAuMjA5MDMsInN1YiI6IjUwMDQiLCJzY29wZXMiOltdfQ.IYZPDYGpwnK_f57UIL488ftK-4wAajrurMTl8xecM_6YATlSq4RHf9la3NCNT_rhwLnQkndb6u7Kx5O7zy0V0s8NIeYCuXxky6suCZUdkEP91zk3QzSkwABDmBDnjnOFUedQvA3nO2eIwST6F-abO65DZAq4ENffynyvTLYSHblrgs35dBG9MYDI449jUUYF_ZaiUsU7vuNRvBJHzuuapewoG43iVwPlLjah7h7r7pvZO214fPB-FcrXdGwxKIu2GCbvVQIs0Qws6fqjXzwod92HJ-vHptOhQEjhpSyDeJkp5tOQX0gNEp3k2fin5Qqm52ZD1Vi1_X5AD8RRNLBnfJXZ42PAmCAGc0y-qEaAsEx905RP8psxZgnMFMI8F7j6uQ15GLDQQHnG1Bgiqb8MGrH-5tzyOxYUQ8EYwxkjaS6zne-bpsHywgAKCZAd2udbRSz7pIPDQn34XcGso7ZOGLhBh5K1wYMUtpKCduvTESODQoj8hLP-P0ZnUkNWqY-aCruelcHNjtDb8AddidvRFgBK2S3GULAxpd9QepHg3qUOaoJdtaY-fdaELhBfsWUGjNZegzx4OPraa2dnhzGuSzAIZ8MCGSTARlZ-P-TAmhRJt3bXq_SK-_NuaNxcPr-0FrjUStdRz0bmUIEpDE-0LkAOtxZ-L3-I04PWzwx7_EI"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"todo test app\",\n    \"description\": \"Todo Test App Desc\",\n    \"isCompleted\": false\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/todo/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"todo",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Todo Detail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOTJmMGM2YzNmNjJlM2Q1YWYzMjljZjIwYTRiMzc1ODg0OTY0NjdiMWFkODlhN2ZkOWM2YzI4ZDI3ZWVjNjgxN2QyZTMyN2ViNDA1N2IyNmIiLCJpYXQiOjE2MTk2OTU4MDkuOTg0NzcsIm5iZiI6MTYxOTY5NTgwOS45ODQ3NzMsImV4cCI6MTY1MTIzMTgwOS45NzkzMTIsInN1YiI6IjUwMDQiLCJzY29wZXMiOltdfQ.dvhEGvI2sl0GtEonzxDFnjE-uiOm0VvDqHiW8GCQzbnBqCJa9lMt2mYy9kDffdt6WLZ2eI8mhR0-nUlOz3WSjDrQLxRP0FFxh51NsksXpjHrDoTBFo9YQdZ5Qzy7uqHeDOnvDWo2HNvKCWBq3YI4FMQT6SYpfeeK79bsW0KbrCYM9HceEr5gD9ZmSSQKCTyajrqbkzitfbA2H0zFMDcrqqjcL_NXNwjLGciR5ruc9tFVdDSHJYBxA5uRIFb0Xh4WqYEKgLZ4MhEaZgrehFydEYuxiB_1FMzK78Kpv9F1vPi6j5HmhYFWmtDN6HyMuVYJ2CaonNwWoKSCqfnXi_efocs-kOrEmBxdkTGtZ0YAW5HNPTXYoSCq-Gv8h_EiVuKDwx9Y-PNRbFVQROxvX0sN_SpNJMMyuwS6TsCztDZNYKbP0fjApO7knS_m0J8NX5OatytoKhxSMjECLqD9eTo2qR9ZDbIGG8Atl-ld7aZ_r8C87PpRKb4vix5d4fAeYNpU04K6nQSh5F4o7BelwUCx9ytLo35tnn5jjhv61gi4RFX-P1wwztN3Fz1hY51IasK-UdPzBSfSAbsL3RYjNDM4p3vuEcOZpk_sXK_T44q6XYcVPrgNdJKo6EKyf-uRXSfn1ev2PlTnWvCGgPD0DZcV7pKN3oGMi6u-B-rCRjhSZUs"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/todo/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"todo",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete/Destroy Todo",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOTJmMGM2YzNmNjJlM2Q1YWYzMjljZjIwYTRiMzc1ODg0OTY0NjdiMWFkODlhN2ZkOWM2YzI4ZDI3ZWVjNjgxN2QyZTMyN2ViNDA1N2IyNmIiLCJpYXQiOjE2MTk2OTU4MDkuOTg0NzcsIm5iZiI6MTYxOTY5NTgwOS45ODQ3NzMsImV4cCI6MTY1MTIzMTgwOS45NzkzMTIsInN1YiI6IjUwMDQiLCJzY29wZXMiOltdfQ.dvhEGvI2sl0GtEonzxDFnjE-uiOm0VvDqHiW8GCQzbnBqCJa9lMt2mYy9kDffdt6WLZ2eI8mhR0-nUlOz3WSjDrQLxRP0FFxh51NsksXpjHrDoTBFo9YQdZ5Qzy7uqHeDOnvDWo2HNvKCWBq3YI4FMQT6SYpfeeK79bsW0KbrCYM9HceEr5gD9ZmSSQKCTyajrqbkzitfbA2H0zFMDcrqqjcL_NXNwjLGciR5ruc9tFVdDSHJYBxA5uRIFb0Xh4WqYEKgLZ4MhEaZgrehFydEYuxiB_1FMzK78Kpv9F1vPi6j5HmhYFWmtDN6HyMuVYJ2CaonNwWoKSCqfnXi_efocs-kOrEmBxdkTGtZ0YAW5HNPTXYoSCq-Gv8h_EiVuKDwx9Y-PNRbFVQROxvX0sN_SpNJMMyuwS6TsCztDZNYKbP0fjApO7knS_m0J8NX5OatytoKhxSMjECLqD9eTo2qR9ZDbIGG8Atl-ld7aZ_r8C87PpRKb4vix5d4fAeYNpU04K6nQSh5F4o7BelwUCx9ytLo35tnn5jjhv61gi4RFX-P1wwztN3Fz1hY51IasK-UdPzBSfSAbsL3RYjNDM4p3vuEcOZpk_sXK_T44q6XYcVPrgNdJKo6EKyf-uRXSfn1ev2PlTnWvCGgPD0DZcV7pKN3oGMi6u-B-rCRjhSZUs"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/todo/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"todo",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Register user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"jhon\",\n    \"email\": \"sal@teqxs.com\",\n    \"password\": \"sam4031949\",\n    \"password_confirmation\": \"sam4031949\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"sal@teqxs.com\",\n    \"password\": \"sam4031949\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verify email",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"code\": \"AsgpK\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/auth/verify-email/5004",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"verify-email",
+								"5004"
+							]
+						},
+						"description": "end point: /api/auth/verify-email/{userId}"
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOTJmMGM2YzNmNjJlM2Q1YWYzMjljZjIwYTRiMzc1ODg0OTY0NjdiMWFkODlhN2ZkOWM2YzI4ZDI3ZWVjNjgxN2QyZTMyN2ViNDA1N2IyNmIiLCJpYXQiOjE2MTk2OTU4MDkuOTg0NzcsIm5iZiI6MTYxOTY5NTgwOS45ODQ3NzMsImV4cCI6MTY1MTIzMTgwOS45NzkzMTIsInN1YiI6IjUwMDQiLCJzY29wZXMiOltdfQ.dvhEGvI2sl0GtEonzxDFnjE-uiOm0VvDqHiW8GCQzbnBqCJa9lMt2mYy9kDffdt6WLZ2eI8mhR0-nUlOz3WSjDrQLxRP0FFxh51NsksXpjHrDoTBFo9YQdZ5Qzy7uqHeDOnvDWo2HNvKCWBq3YI4FMQT6SYpfeeK79bsW0KbrCYM9HceEr5gD9ZmSSQKCTyajrqbkzitfbA2H0zFMDcrqqjcL_NXNwjLGciR5ruc9tFVdDSHJYBxA5uRIFb0Xh4WqYEKgLZ4MhEaZgrehFydEYuxiB_1FMzK78Kpv9F1vPi6j5HmhYFWmtDN6HyMuVYJ2CaonNwWoKSCqfnXi_efocs-kOrEmBxdkTGtZ0YAW5HNPTXYoSCq-Gv8h_EiVuKDwx9Y-PNRbFVQROxvX0sN_SpNJMMyuwS6TsCztDZNYKbP0fjApO7knS_m0J8NX5OatytoKhxSMjECLqD9eTo2qR9ZDbIGG8Atl-ld7aZ_r8C87PpRKb4vix5d4fAeYNpU04K6nQSh5F4o7BelwUCx9ytLo35tnn5jjhv61gi4RFX-P1wwztN3Fz1hY51IasK-UdPzBSfSAbsL3RYjNDM4p3vuEcOZpk_sXK_T44q6XYcVPrgNdJKo6EKyf-uRXSfn1ev2PlTnWvCGgPD0DZcV7pKN3oGMi6u-B-rCRjhSZUs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/auth/logout",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
