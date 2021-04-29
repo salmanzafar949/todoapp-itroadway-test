@@ -34,6 +34,17 @@ class UserController extends Controller
         ],Response::HTTP_OK);
     }
 
+    public function logout(): \Illuminate\Http\Response|\Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\Routing\ResponseFactory
+    {
+        Auth::user()
+            ->token()
+            ->delete();
+
+        return \response([
+            'data' => 'Successfully logout'
+        ], Response::HTTP_OK);
+    }
+
     public function verifyEmail(VerifyEmailRequest $request, $user): \Illuminate\Http\Response|\Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\Routing\ResponseFactory
     {
         $user = User::findOrFail($user);

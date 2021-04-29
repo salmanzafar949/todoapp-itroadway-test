@@ -8,6 +8,7 @@ Route::prefix('auth')
         Route::post('register', [UserController::class, 'register']);
         Route::post('login', [UserController::class, 'login']);
         Route::post('verify-email/{user}', [UserController::class, 'verifyEmail']);
+        Route::post('logout', [UserController::class, 'logout'])->middleware('auth:api');
     });
 
 Route::prefix('todo')
